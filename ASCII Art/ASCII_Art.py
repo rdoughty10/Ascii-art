@@ -1,3 +1,4 @@
+import sys
 from PIL import Image
 from colorama import init, Fore
 from termcolor import colored
@@ -6,7 +7,9 @@ from colr import Colr as C
 
 init()
 
-im = Image.open("ryan.jpg")
+image = sys.argv[1]
+
+im = Image.open(image)
 im.rotate(90)
 pix = im.load()
 
